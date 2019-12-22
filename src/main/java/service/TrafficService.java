@@ -12,9 +12,14 @@ import model.Weather;
 public class TrafficService {
 
 
-    private Orbit orbit1 = new Orbit(20, 18);
-    private Orbit orbit2 = new Orbit(10, 20);;
+    private Orbit orbit1 ;
+    private Orbit orbit2 ;
 
+    public TrafficService(){
+        orbit1 = new Orbit(20, 18);
+        orbit2 = new Orbit(10, 20);
+
+    }
     private void defineOrbits(Float orbit1Speed, Float orbit2Speed){
         orbit1.setSpeed(orbit1Speed);
         orbit2.setSpeed(orbit2Speed);
@@ -25,9 +30,9 @@ public class TrafficService {
 
         float speed = Math.min(vehicle.getSpeed(), orbit.getSpeed());
 
-        int carters = orbit.getCraters() + (weather.getCraterSpeedRate() * (orbit.getCraters() / 100));
+        int craters = orbit.getCraters() + (weather.getCraterSpeedRate() * (orbit.getCraters() / 100));
 
-        return (vehicle.getCraterSprint() * carters) +
+        return (vehicle.getCraterSprint() * craters) +
                 ((Float.valueOf(orbit.getDistance())/ speed) * 60);
 
     }
