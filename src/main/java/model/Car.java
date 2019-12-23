@@ -17,9 +17,6 @@ public class Car extends Vehicle {
     }
 
     public static Car getInstance(){
-        if(car == null){
-            car = new Car();
-        }
         return car;
     }
 

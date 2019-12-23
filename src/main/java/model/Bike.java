@@ -18,9 +18,6 @@ public class Bike extends Vehicle {
         bike.favourableWeather = Arrays.asList(Weather.SUNNY, Weather.WINDY);
     }
     public static Bike getInstance(){
-        if(bike == null){
-            bike = new Bike();
-        }
        return bike;
     }
 

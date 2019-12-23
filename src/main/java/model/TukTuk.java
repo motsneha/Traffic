@@ -16,9 +16,6 @@ public class TukTuk extends Vehicle {
     }
 
     public static TukTuk getInstance(){
-        if(tukTuk == null){
-            tukTuk = new TukTuk();
-        }
         return tukTuk;
     }
 

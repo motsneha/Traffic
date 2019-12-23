@@ -8,6 +8,7 @@ public class Vehicle {
    protected float craterSprint;
    protected List<Weather> favourableWeather;
 
+
     public List<Weather> getFavourableWeather() {
         return Collections.unmodifiableList(favourableWeather);
     }
@@ -15,6 +16,7 @@ public class Vehicle {
     public float getSpeed() {
         return speed;
     }
+
 
     public float getCraterSprint() {
         return craterSprint;
